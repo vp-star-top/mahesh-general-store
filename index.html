@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mahesh General Store | Koil, Uttar Pradesh</title>
+
+  <meta name="description"
+        content="Mahesh General Store, CDF Complex Road, Koil, Uttar Pradesh. Your local store for everyday essentials.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8faf8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #777;
+      margin-top: -3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #16833a;
+    }
+
+    .call-btn {
+      padding: 10px 17px;
+      border-radius: 25px;
+      background: #16833a;
+      color: white;
+      font-weight: 700;
+    }
+
+    .call-btn:hover {
+      background: #0f642c;
+      color: white;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.35)),
+        url("https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.15rem;
+      margin-bottom: 30px;
+      color: #f1f1f1;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #16833a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0f642c;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      color: #16833a;
+    }
+
+    .btn-light:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ---------- GENERAL ---------- */
+
+    section {
+      padding: 80px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: #666;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* ---------- WHY US ---------- */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+      transition: 0.25s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .why-icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    /* ---------- CATEGORIES ---------- */
+
+    .categories {
+      background: #eef7ef;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      min-height: 170px;
+      padding: 25px;
+      border-radius: 15px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: 0.25s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-icon {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- PRODUCTS ---------- */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(0,0,0,0.07);
+      transition: 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f1;
+      font-size: 4rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 5px;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .product-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: 800;
+    }
+
+    .enquiry {
+      padding: 8px 12px;
+      border-radius: 7px;
+      background: #16833a;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* ---------- OFFERS ---------- */
+
+    .offers {
+      background: #16833a;
+      color: white;
+    }
+
+    .offers .section-heading p {
+      color: #e4f5e7;
+    }
+
+    .offer-box {
+      background: white;
+      color: #222;
+      border-radius: 18px;
+      padding: 35px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    }
+
+    .offer-box h3 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .offer-box p {
+      color: #666;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 380px;
+      border-radius: 18px;
+      background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url("https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
+    }
+
+    .about-text h2 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    /* ---------- REVIEWS ---------- */
+
+    .reviews {
+      background: #f1f5f1;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .stars {
+      margin-bottom: 12px;
+    }
+
+    .review p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .review strong {
+      font-size: 0.9rem;
+    }
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 22px rgba(0,0,0,0.06);
+    }
+
+    .contact-item {
+      margin-bottom: 22px;
+    }
+
+    .contact-item small {
+      display: block;
+      color: #777;
+      margin-bottom: 3px;
+    }
+
+    .contact-item strong {
+      font-size: 1.05rem;
+    }
+
+    .map {
+      min-height: 350px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #e8ece8;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border: 0;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #132016;
+      color: white;
+      padding: 50px 25px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: #c5cfc7;
+    }
+
+    footer a {
+      display: block;
+      color: #c5cfc7;
+      margin-bottom: 7px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: auto;
+      border-top: 1px solid #334337;
+      padding-top: 20px;
+      text-align: center;
+      color: #9eaaa1;
+      font-size: 0.85rem;
+    }
+
+    /* ---------- FLOATING CALL BUTTON ---------- */
+
+    .floating-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #16833a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 70px;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 8px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .navbar > .call-btn {
+        display: none;
+      }
+
+      .why-grid,
+      .category-grid,
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      section {
+        padding: 60px 18px;
+      }
+
+      .navbar {
+        padding: 14px 18px;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero-content {
+        padding: 50px 18px;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .why-grid,
+      .category-grid,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="#home" class="logo">
+        Mahesh General Store
+        <span>Koil, Uttar Pradesh</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="call-btn" href="tel:07290832138">
+        Call Now
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <h1>
+          Everything You Need,
+          All in One Place.
+        </h1>
+
+        <p>
+          Welcome to Mahesh General Store — your local general store
+          at CDF Complex Road, Koil, Uttar Pradesh.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#products" class="btn btn-primary">
+            Explore Products
+          </a>
+
+          <a href="tel:07290832138" class="btn btn-light">
+            Call 07290832138
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Why Choose Us?</h2>
+          <p>
+            Your local store for everyday needs.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="why-icon">🛒</div>
+            <h3>Daily Essentials</h3>
+            <p>
+              Find useful everyday products in one convenient place.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <h3>Quality Products</h3>
+            <p>
+              A selection of products for your regular household needs.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Great Value</h3>
+            <p>
+              Shop for your everyday requirements at competitive prices.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3>Local & Trusted</h3>
+            <p>
+              A convenient local store serving customers in Koil.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories" id="categories">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>Shop by Category</h2>
+
+          <p>
+            Explore some of the everyday categories available at
+            Mahesh General Store.
+          </p>
+
+        </div>
+
+        <div class="category-grid">
+
+          <div class="category-card">
+            <div class="category-icon">🌾</div>
+            <h3>Groceries</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🍪</div>
+            <h3>Snacks</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🥤</div>
+            <h3>Beverages</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🧴</div>
+            <h3>Personal Care</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🏠</div>
+            <h3>Household Items</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">📚</div>
+            <h3>Stationery</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🧼</div>
+            <h3>Cleaning Products</h3>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">🛍️</div>
+            <h3>Daily Essentials</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>Popular Products</h2>
+
+          <p>
+            Product examples are shown below. Replace them with
+            the actual products available in the shop.
+          </p>
+
+        </div>
+
+        <div class="product-grid">
+
+          <div class="product-card">
+
+            <div class="product-image">🌾</div>
+
+            <div class="product-info">
+
+              <h3>Rice</h3>
+
+              <p>
+                Everyday grocery essential
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  Add Price
+                </span>
+
+                <a href="tel:07290832138" class="enquiry">
+                  Enquire
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-image">🥛</div>
+
+            <div class="product-info">
+
+              <h3>Milk</h3>
+
+              <p>
+                Everyday dairy essential
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  Add Price
+                </span>
+
+                <a href="tel:07290832138" class="enquiry">
+                  Enquire
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-image">🍪</div>
+
+            <div class="product-info">
+
+              <h3>Biscuits</h3>
+
+              <p>
+                Snacks and refreshments
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  Add Price
+                </span>
+
+                <a href="tel:07290832138" class="enquiry">
+                  Enquire
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product-card">
+
+            <div class="product-image">🧴</div>
+
+            <div class="product-info">
+
+              <h3>Personal Care</h3>
+
+              <p>
+                Everyday personal-care products
+              </p>
+
+              <div class="product-bottom">
+
+                <span class="price">
+                  Add Price
+                </span>
+
+                <a href="tel:07290832138" class="enquiry">
+                  Enquire
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section class="offers" id="offers">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>Special Offers</h2>
+
+          <p>
+            Add the latest shop offers and discounts here.
+          </p>
+
+        </div>
+
+        <div class="offer-box">
+
+          <div>
+
+            <h3>Special Offers Coming Soon</h3>
+
+            <p>
+              Replace this section with your latest Mahesh General
+              Store deals and discounts.
+            </p>
+
+          </div>
+
+          <a href="tel:07290832138" class="btn btn-primary">
+            Ask About Offers
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image"></div>
+
+          <div class="about-text">
+
+            <h2>
+              About Mahesh General Store
+            </h2>
+
+            <p>
+              Mahesh General Store is a local retail store located
+              at CDF Complex Road, Koil, Uttar Pradesh.
+            </p>
+
+            <p>
+              We aim to provide customers with convenient access
+              to everyday essentials and general-store products.
+            </p>
+
+            <p>
+              Visit us for your daily shopping needs.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+              Visit Our Store
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>Customer Reviews</h2>
+
+          <p>
+            Replace these sample reviews with genuine customer reviews.
+          </p>
+
+        </div>
+
+        <div class="review-grid">
+
+          <div class="review">
+
+            <div class="stars">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+              Add a genuine customer review here.
+            </p>
+
+            <strong>
+              — Customer Name
+            </strong>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+              Add a genuine customer review here.
+            </p>
+
+            <strong>
+              — Customer Name
+            </strong>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+              Add a genuine customer review here.
+            </p>
+
+            <strong>
+              — Customer Name
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <h2>Visit Mahesh General Store</h2>
+
+          <p>
+            We are located at CDF Complex Road, Koil, Uttar Pradesh.
+          </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <div class="contact-item">
+
+              <small>Shop Name</small>
+
+              <strong>
+                Mahesh General Store
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>Address</small>
+
+              <strong>
+                CDF Complex Road, Koil, Uttar Pradesh, India
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>Phone</small>
+
+              <strong>
+                <a href="tel:07290832138">
+                  07290832138
+                </a>
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>Opening Time</small>
+
+              <strong>
+                6:00 AM
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>Closing Time</small>
+
+              <strong>
+                Add closing time
+              </strong>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <small>Weekly Holiday</small>
+
+              <strong>
+                Add weekly holiday
+              </strong>
+
+            </div>
+
+
+            <div class="hero-buttons">
+
+              <a
+                href="tel:07290832138"
+                class="btn btn-primary">
+                Call Now
+              </a>
+
+              <!--
+                Replace the # below with the actual Google Maps URL
+                for Mahesh General Store.
+              -->
+
+              <a
+                href="#"
+                class="btn btn-primary"
+                onclick="alert('Add the Google Maps link in the HTML first.'); return false;">
+                Get Directions
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- MAP PLACEHOLDER -->
+
+          <div class="map">
+
+            <!--
+              Replace this entire div with a Google Maps iframe
+              once you have the correct location.
+            -->
+
+            <div style="
+              height:100%;
+              min-height:350px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              text-align:center;
+              padding:30px;
+            ">
+
+              <div>
+
+                <div style="font-size:3rem;">
+                  📍
+                </div>
+
+                <h3>
+                  Mahesh General Store
+                </h3>
+
+                <p>
+                  CDF Complex Road,<br>
+                  Koil, Uttar Pradesh
+                </p>
+
+                <br>
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=CDF+Complex+Road+Koil+Uttar+Pradesh"
+                  target="_blank"
+                  class="btn btn-primary">
+                  Open in Google Maps
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          Mahesh General Store
+        </h3>
+
+        <p>
+          Your local general store at CDF Complex Road,
+          Koil, Uttar Pradesh.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Quick Links
+        </h3>
+
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="tel:07290832138">
+          07290832138
+        </a>
+
+        <p>
+          CDF Complex Road,<br>
+          Koil, Uttar Pradesh
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Mahesh General Store.
+      All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING CALL BUTTON -->
+
+  <a
+    href="tel:07290832138"
+    class="floating-call"
+    aria-label="Call Mahesh General Store">
+    ☎
+  </a>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const menu = document.getElementById("navMenu");
+
+      menu.classList.toggle("active");
+
+    }
+
+
+    // Close mobile menu after clicking a link
+
+    document.querySelectorAll("#navMenu a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document
+          .getElementById("navMenu")
+          .classList.remove("active");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
